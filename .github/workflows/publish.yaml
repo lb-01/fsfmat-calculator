@@ -17,6 +17,9 @@ jobs:
           node-version: 24
           registry-url: "https://npm.pkg.github.com"
           scope: "@lb-01"
+      - name: debug
+        run: |
+          cat /home/runner/work/_temp/.npmrc
       - name: Publish to GitHub Packages
         run: npm publish
         env:
